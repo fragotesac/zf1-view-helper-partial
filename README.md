@@ -6,4 +6,4 @@ Zend Framework 1 - View_Helper_Partial
 [![Total Downloads](https://poser.pugx.org/diablomedia/zendframework1-view-helper-partial/downloads)](https://packagist.org/packages/diablomedia/zendframework1-view-helper-partial)
 [![License](https://poser.pugx.org/diablomedia/zendframework1-view-helper-partial/license)](https://packagist.org/packages/diablomedia/zendframework1-view-helper-partial)
 
-This is just the Zend_View_Helper_Partial component extracted from our fork of the Zend Framework 1 repo (https://github.com/diablomedia/zf1).
+This is just the Zend_View_Helper_Partial and Zend_View_Helper_PartialLoop components extracted from our fork of the Zend Framework 1 repo (https://github.com/diablomedia/zf1).
