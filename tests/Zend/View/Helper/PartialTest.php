@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/** Zend_View_Helper_Partial */
-require_once 'Zend/View/Helper/Partial.php';
-
-/** Zend_View */
-require_once 'Zend/View.php';
-
-/** Zend_Controller_Front */
-require_once 'Zend/Controller/Front.php';
 
 /**
  * Test class for Zend_View_Helper_Partial.
@@ -129,11 +121,8 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
         ));
         $this->helper->setView($view);
 
-        try {
-            $return = $this->helper->partial('partialTwo.phtml', 'barbazbat');
-            $this->fail('Partial should throw exception if module does not exist');
-        } catch (Exception $e) {
-        }
+        $this->expectException(Zend_View_Exception::class);
+        $return = $this->helper->partial('partialTwo.phtml', 'barbazbat');
     }
 
     /**
