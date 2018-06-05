@@ -53,7 +53,7 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
     public function setUp()
     {
         $this->basePath = dirname(__FILE__) . '/_files/modules';
-        $this->helper = new Zend_View_Helper_Partial();
+        $this->helper   = new Zend_View_Helper_Partial();
         Zend_Controller_Front::getInstance()->resetInstance();
     }
 
@@ -152,11 +152,11 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
      */
     public function testCloneViewClearsViewVariables()
     {
-        $view = new Zend_View();
+        $view      = new Zend_View();
         $view->foo = 'bar';
         $this->helper->setView($view);
 
-        $clone = $this->helper->cloneView();
+        $clone      = $this->helper->cloneView();
         $clonedVars = $clone->getVars();
 
         $this->assertEmpty($clonedVars);
@@ -165,7 +165,7 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
 
     public function testObjectModelWithPublicPropertiesSetsViewVariables()
     {
-        $model = new stdClass();
+        $model      = new stdClass();
         $model->foo = 'bar';
         $model->bar = 'baz';
 
@@ -200,7 +200,7 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
     public function testObjectModelSetInObjectKeyWhenKeyPresent()
     {
         $this->helper->setObjectKey('foo');
-        $model = new stdClass();
+        $model          = new stdClass();
         $model->footest = 'bar';
         $model->bartest = 'baz';
 

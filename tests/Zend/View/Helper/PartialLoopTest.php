@@ -53,7 +53,7 @@ class Zend_View_Helper_PartialLoopTest extends PHPUnit\Framework\TestCase
     public function setUp()
     {
         $this->basePath = dirname(__FILE__) . '/_files/modules';
-        $this->helper = new Zend_View_Helper_PartialLoop();
+        $this->helper   = new Zend_View_Helper_PartialLoop();
         Zend_Controller_Front::getInstance()->resetInstance();
     }
 
@@ -310,8 +310,8 @@ class Zend_View_Helper_PartialLoopTest extends PHPUnit\Framework\TestCase
         $this->helper->setView($view);
 
         $result = $this->helper->partialLoop('partialLoopCouter.phtml', $data);
-        foreach ($data as $key=>$item) {
-            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key+1);
+        foreach ($data as $key => $item) {
+            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key + 1);
             $this->assertContains($string, $result);
         }
     }
@@ -335,14 +335,14 @@ class Zend_View_Helper_PartialLoopTest extends PHPUnit\Framework\TestCase
         $this->helper->setView($view);
 
         $result = $this->helper->partialLoop('partialLoopCouter.phtml', $data);
-        foreach ($data as $key=>$item) {
-            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key+1);
+        foreach ($data as $key => $item) {
+            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key + 1);
             $this->assertContains($string, $result);
         }
 
         $result = $this->helper->partialLoop('partialLoopCouter.phtml', $data);
-        foreach ($data as $key=>$item) {
-            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key+1);
+        foreach ($data as $key => $item) {
+            $string = 'This is an iteration: ' . $item['message'] . ', pointer at ' . ($key + 1);
             $this->assertContains($string, $result);
         }
     }
@@ -361,8 +361,7 @@ class Zend_View_Helper_PartialLoopTest extends PHPUnit\Framework\TestCase
 
         $view = new Zend_View(
             array(
-                 'scriptPath' =>
-                 $this->basePath . '/default/views/scripts'
+                 'scriptPath' => $this->basePath . '/default/views/scripts'
             )
         );
         $this->helper->setView($view);
