@@ -144,7 +144,7 @@ class Zend_View_Helper_PartialTest extends PHPUnit\Framework\TestCase
         $this->helper->setView($view);
         $clone = $this->helper->cloneView();
         $this->assertNotSame($view, $clone);
-        $this->assertTrue($clone instanceof Zend_View);
+        $this->assertInstanceOf(Zend_View::class, $clone);
     }
 
     /**
