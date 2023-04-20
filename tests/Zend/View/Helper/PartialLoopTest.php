@@ -483,6 +483,8 @@ class Zend_View_Helper_PartialLoop_BogusIteratorTest
 
 class Zend_View_Helper_PartialLoop_ToArrayTest
 {
+    protected $data;
+
     public function __construct(array $data)
     {
         $this->data = $data;
@@ -545,6 +547,7 @@ class Zend_View_Helper_PartialLoop_IteratorWithToArrayTest implements Iterator, 
     }
 }
 
+#[AllowDynamicProperties]
 class Zend_View_Helper_PartialLoop_IteratorWithToArrayTestContainer
 {
     protected $_info;
